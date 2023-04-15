@@ -125,7 +125,7 @@
 	    visible="false"
 	    distorted="false"
 		zorder="90"
-	    ath="86.458" atv="-2.000" 
+	    ath="86.458" atv="-2" 
 	    width="296"
 	    height="65"
 		rz="0"
@@ -258,7 +258,6 @@
 
 		delayedcall(.5, set(hotspot[KennedyImage].visible, false))
 	</action>
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="171.798" atv="-0.722" linkedscene="scene_kennedy_pano3" />
 
 
 	</scene>

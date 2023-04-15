@@ -82,93 +82,7 @@
 		<image prealign="null">
 			<cube url="panos/kennedy_pano3.tiles/pano_%s.jpg" />
 		</image>
-		<!-- Connelly image -->
-	<hotspot name="INFOConnelly"
-	    url="infoicon.png"
-	    enabled="true"
-	    visible="true"
-	    distorted="true"
-	    crop="0|0|100|100"
-	    zorder="20"
-	    ath="86.458" atv="-5.500" 
-	    width="60"
-	    height="140"
-		rz="1"
-		ry="0"
-		rx="-75"
-	    edge="center"
-	    onclick="showConnelly()"
-	    keep="false"
-	/>
-		<hotspot name="ConnellyImage"
-	    url="conndedication.jpg"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-	    crop=""
-	    zorder="20"
-	    ath="86.458" atv="-5.500" 
-	    width="400"
-	    height="250"
-		rz="0"
-		ry="0"
-		rx="0"
-	    edge="bottom"
-	    alpha="1"
-	    onclick="hideConnelly()"
-	/>
-	<hotspot name="ConnellyText"
-		url="textfield.swf"
-		html="Connelly hall was completed in 1980. This image shows the dedication ceremony on September 21, 1980, with Cardinal Krol, the Archbishop of of Philadelphia blessing the new building."
-		css="font-family:Arial; font-size:12px; color:#000000;"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-		zorder="90"
-	    ath="86.458" atv="-2.000" 
-	    width="296"
-	    height="65"
-		rz="0"
-		ry="0"
-		rx="0"
-	    edge="center"
-		alpha=".7"
-		background ="true"
-	/>
-	<action name="showConnelly">
-    	set(hotspot[INFOConnelly].visible, false);
-		set(hotspot[INFOConnelly].enabled, false);
-		set(hotspot[ConnellyImage].alpha, 0);
-    	
-    	set(hotspot[ConnellyImage].height, 0.1);
-    	set(hotspot[ConnellyImage].visible, true);
-    	tween(hotspot[ConnellyImage].alpha, 1,.5,linear);
-    	tween(hotspot[ConnellyImage].height, 250, .5, linear, wait);
-
-    	set(hotspot[ConnellyTextBack].visible, true);
-		set(hotspot[ConnellyTextBack].alpha, 0);
-		tween(hotspot[ConnellyTextBack].alpha, 1,.5,linear, wait);
-
-		set(hotspot[ConnellyImage].enabled, true);
-		set(hotspot[foyer].enabled, false);
-		set(hotspot[ConnellyText].visible,true);
-	</action>
-
-	<action name="hideConnelly">
-		tween(hotspot[ConnellyTextBack].alpha, 0, .5, linear);
-		tween(hotspot[ConnellyImage].alpha, 0, .5, linear);
-		tween(hotspot[ConnellyImage].height, 1, .5, linear, wait);
 		
-		set(hotspot[ConnellyImage].enabled, false);
-		set(hotspot[ConnellyImage].visible, false);
-		set(hotspot[ConnellyImage].alpha, 1);
-		set(hotspot[INFOConnelly].visible, true);
-		set(hotspot[INFOConnelly].enabled, true);
-		set(hotspot[foyer].enabled, true);
-		set(hotspot[ConnellyText].visible,false);
-
-		delayedcall(.5, set(hotspot[ConnellyImage].visible, false))
-	</action>
 			<!-- Kennedy image -->
 	<hotspot name="INFOKennedy"
 	    url="infoicon.png"
@@ -177,7 +91,7 @@
 	    distorted="true"
 	    crop="0|0|100|100"
 	    zorder="20"
-	    ath="7.000" atv="0.000" 
+	    ath="7" atv="0" 
 	    width="60"
 	    height="140"
 		rz="1"
@@ -194,8 +108,8 @@
 	    distorted="true"
 	    crop=""
 	    zorder="20"
-	    ath="20.000"
-	    atv="20.000"
+	    ath="20"
+	    atv="20"
 	    width="600"
 	    height="500"
 		rz="0"
@@ -213,8 +127,8 @@
 	    visible="false"
 	    distorted="true"
 		zorder="90"
-	    ath="20.000"
-	    atv="22.000"
+	    ath="20"
+	    atv="22"
 	    width="296"
 	    height="45"
 		rz="0"
@@ -258,8 +172,6 @@
 
 		delayedcall(.5, set(hotspot[KennedyImage].visible, false))
 	</action>
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="171.798" atv="-0.722" linkedscene="scene_kennedy_pano3" />
-
 
 	</scene>
 
