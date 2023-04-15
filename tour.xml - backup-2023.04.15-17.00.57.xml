@@ -258,20 +258,19 @@
 		delayedcall(.5, set(hotspot[AlumniImage].visible, false))
 	</action>
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-85.143" atv="-2.133" linkedscene="scene_kennedy_pano3" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="132.281" atv="-3.936" linkedscene="scene_img_2158_panorama" />
 
 
 	</scene>
 
 <scene name="scene_IMG_2158_Panorama" title="IMG_2158 Panorama" onstart="" thumburl="panos/IMG_2158_Panorama.tiles/thumb.jpg" lat="" lng="" heading="">
 		
-		<control bouncinglimits="false" />
+		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="91.794872" maxpixelzoom="2.0" fovmin="21.692487" fovmax="91.794872" limitview="range" hlookatmin="-180.0" hlookatmax="180.0" vlookatmin="-44.775" vlookatmax="36.646155"/>
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/IMG_2158_Panorama.tiles/preview.jpg" />
 
-		<image hfov="360.0" vfov="0.0" voffset="0.0" prealign="null">
+		<image hfov="360.00" vfov="89.574682" voffset="0.00">
 			<sphere url="panos/IMG_2158_Panorama.tiles/pano_%v%h.jpg" multires="4000,8000x1990" />
 		</image>
 
