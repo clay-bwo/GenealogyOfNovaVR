@@ -80,6 +80,7 @@
 			<cube url="panos/grotto.tiles/pano_%s.jpg" />
 		</image>
 		
+		
 		<!-- Austin image -->
 		<hotspot name="INFOAustin"
 	    url="infoicon.png"
@@ -273,94 +274,6 @@
 		<image hfov="360.0" vfov="0.0" voffset="0.0" prealign="null">
 			<sphere url="panos/IMG_2158_Panorama.tiles/pano_%v%h.jpg" multires="4000,8000x1990" />
 		</image>
-		<!-- Barry image -->
-	<hotspot name="INFOBarry"
-	    url="infoicon.png"
-	    enabled="true"
-	    visible="true"
-	    distorted="true"
-	    crop="0|0|100|100"
-	    zorder="20"
-	    ath="-15" atv="-3" 
-	    width="60"
-	    height="140"
-		rz="1"
-		ry="0"
-		rx="-75"
-	    edge="center"
-	    onclick="showBarry()"
-	    keep="false"
-	/>
-		<hotspot name="BarryImage"
-	    url="Barryold.jpg"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-	    crop=""
-	    zorder="20"
-	    ath="-8" atv="10" 
-	    width="500"
-	    height="370"
-		rz="0"
-		ry="0"
-		rx="10"
-	    edge="bottom"
-	    alpha="1"
-	    onclick="hideBarry()"
-	/>
-	<hotspot name="BarryText"
-		url="textfield.swf"
-		html="John Barry hall was built in 1947 to serve Villanova's Naval ROTC. It was named after Commodore John Barry, an American revolutionary regarded as the Father of the US Navy"
-		css="font-family:Arial; font-size:10px; color:#000000;"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-		zorder="90"
-	    ath="-10" atv="12" 
-	    width="296"
-	    height="40"
-		rz="0"
-		ry="0"
-		rx="0"
-	    edge="center"
-		alpha=".7"
-		background ="true"
-	/>
-	<action name="showBarry">
-    	set(hotspot[INFOBarry].visible, false);
-		set(hotspot[INFOBarry].enabled, false);
-		set(hotspot[BarryImage].alpha, 0);
-    	
-    	set(hotspot[BarryImage].height, 0.1);
-    	set(hotspot[BarryImage].visible, true);
-    	tween(hotspot[BarryImage].alpha, 1,.5,linear);
-    	tween(hotspot[BarryImage].height, 370, .5, linear, wait);
-
-    	set(hotspot[BarryTextBack].visible, true);
-		set(hotspot[BarryTextBack].alpha, 0);
-		tween(hotspot[BarryTextBack].alpha, 1,.5,linear, wait);
-
-		set(hotspot[BarryImage].enabled, true);
-		set(hotspot[foyer].enabled, false);
-		set(hotspot[BarryText].visible,true);
-	</action>
-
-	<action name="hideBarry">
-		tween(hotspot[BarryTextBack].alpha, 0, .5, linear);
-		tween(hotspot[BarryImage].alpha, 0, .5, linear);
-		tween(hotspot[BarryImage].height, 1, .5, linear, wait);
-		
-		set(hotspot[BarryImage].enabled, false);
-		set(hotspot[BarryImage].visible, false);
-		set(hotspot[BarryImage].alpha, 1);
-		set(hotspot[INFOBarry].visible, true);
-		set(hotspot[INFOBarry].enabled, true);
-		set(hotspot[foyer].enabled, true);
-		set(hotspot[BarryText].visible,false);
-
-		delayedcall(.5, set(hotspot[BarryImage].visible, false))
-	</action>
-
 
 	</scene>
 
