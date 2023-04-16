@@ -281,7 +281,7 @@
 	    distorted="true"
 	    crop="0|0|100|100"
 	    zorder="20"
-	    ath="-15.000" atv="-3.000" 
+	    ath="-15" atv="-3" 
 	    width="60"
 	    height="140"
 		rz="1"
@@ -298,7 +298,7 @@
 	    distorted="false"
 	    crop=""
 	    zorder="20"
-	    ath="-8.000" atv="10.000" 
+	    ath="-8" atv="10" 
 	    width="500"
 	    height="370"
 		rz="0"
@@ -316,7 +316,7 @@
 	    visible="false"
 	    distorted="false"
 		zorder="90"
-	    ath="-10.000" atv="12.000" 
+	    ath="-10" atv="12" 
 	    width="296"
 	    height="40"
 		rz="0"
@@ -360,94 +360,6 @@
 
 		delayedcall(.5, set(hotspot[BarryImage].visible, false))
 	</action>
-	<!-- tolfire image -->
-	<hotspot name="INFOtolfire"
-	    url="infoicon.png"
-	    enabled="true"
-	    visible="true"
-	    distorted="true"
-	    crop="0|0|100|100"
-	    zorder="20"
-	   ath="-128" atv="-11" 
-	    width="60"
-	    height="140"
-		rz="1"
-		ry="0"
-		rx="-75"
-	    edge="center"
-	    onclick="showtolfire()"
-	    keep="false"
-	/>
-		<hotspot name="tolfireImage"
-	    url="tolfire.jpg"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-	    crop=""
-	    zorder="20"
-	    ath="-128" atv="0" 
-	    width="500"
-	    height="370"
-		rz="0"
-		ry="0"
-		rx="10"
-	    edge="bottom"
-	    alpha="1"
-	    onclick="hidetolfire()"
-	/>
-	<hotspot name="tolfireText"
-		url="textfield.swf"
-		html="Tolentine and the adjoining St. Thomas of Villanova Monastery have been the victim of fires, with Tolentine suffering a fire in 1928, and the monastery burning in 1932. This newspaper clipping covers the 1932 monastery fire"
-		css="font-family:Arial; font-size:10px; color:#000000;"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-		zorder="90"
-	    ath="-128" atv="3" 
-	    width="296"
-	    height="50"
-		rz="0"
-		ry="0"
-		rx="0"
-	    edge="center"
-		alpha=".7"
-		background ="true"
-	/>
-	<action name="showtolfire">
-    	set(hotspot[INFOtolfire].visible, false);
-		set(hotspot[INFOtolfire].enabled, false);
-		set(hotspot[tolfireImage].alpha, 0);
-    	
-    	set(hotspot[tolfireImage].height, 0.1);
-    	set(hotspot[tolfireImage].visible, true);
-    	tween(hotspot[tolfireImage].alpha, 1,.5,linear);
-    	tween(hotspot[tolfireImage].height, 370, .5, linear, wait);
-
-    	set(hotspot[tolfireTextBack].visible, true);
-		set(hotspot[tolfireTextBack].alpha, 0);
-		tween(hotspot[tolfireTextBack].alpha, 1,.5,linear, wait);
-
-		set(hotspot[tolfireImage].enabled, true);
-		set(hotspot[foyer].enabled, false);
-		set(hotspot[tolfireText].visible,true);
-	</action>
-
-	<action name="hidetolfire">
-		tween(hotspot[tolfireTextBack].alpha, 0, .5, linear);
-		tween(hotspot[tolfireImage].alpha, 0, .5, linear);
-		tween(hotspot[tolfireImage].height, 1, .5, linear, wait);
-		
-		set(hotspot[tolfireImage].enabled, false);
-		set(hotspot[tolfireImage].visible, false);
-		set(hotspot[tolfireImage].alpha, 1);
-		set(hotspot[INFOtolfire].visible, true);
-		set(hotspot[INFOtolfire].enabled, true);
-		set(hotspot[foyer].enabled, true);
-		set(hotspot[tolfireText].visible,false);
-
-		delayedcall(.5, set(hotspot[tolfireImage].visible, false))
-	</action>
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="131.168" atv="-4.392" linkedscene="scene_grotto" />
 
 
 	</scene>
