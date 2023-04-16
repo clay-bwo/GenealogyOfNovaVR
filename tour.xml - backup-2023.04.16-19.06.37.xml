@@ -1,4 +1,4 @@
-﻿<krpano version="1.20.11" title="Virtual Tour">
+<krpano version="1.20.11" title="Virtual Tour">
 
 	<include url="skin/vtourskin.xml" />
 
@@ -666,7 +666,7 @@
 	    distorted="true"
 	    crop="0|0|100|100"
 	    zorder="20"
-	    ath="11" atv="0" 
+	    ath="7.000" atv="0.000" 
 	    width="60"
 	    height="140"
 		rz="1"
@@ -680,15 +680,16 @@
 	    url="armyold.jpg"
 	    enabled="false"
 	    visible="false"
-	    distorted="false"
+	    distorted="true"
 	    crop=""
 	    zorder="20"
-	   ath="20" atv="10" 
-	    width="800"
-	    height="300"
+	    ath="20.000"
+	    atv="20.000"
+	    width="600"
+	    height="500"
 		rz="0"
-		ry="0"
-		rx="0"
+		ry="-10"
+		rx="30"
 	    edge="bottom"
 	    alpha="1"
 	    onclick="hidearmy()"
@@ -701,7 +702,8 @@
 	    visible="false"
 	    distorted="true"
 		zorder="90"
-	    ath="20" atv="12" 
+	    ath="20.000"
+	    atv="22.000"
 	    width="296"
 	    height="45"
 		rz="0"
@@ -719,7 +721,7 @@
     	set(hotspot[armyImage].height, 0.1);
     	set(hotspot[armyImage].visible, true);
     	tween(hotspot[armyImage].alpha, 1,.5,linear);
-    	tween(hotspot[armyImage].height, 300, .5, linear, wait);
+    	tween(hotspot[armyImage].height, 500, .5, linear, wait);
 
     	set(hotspot[armyTextBack].visible, true);
 		set(hotspot[armyTextBack].alpha, 0);
@@ -747,7 +749,6 @@
 	</action>
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="48.195" atv="-7.137" linkedscene="scene_img_2158_panorama" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="88.929" atv="-7.295" linkedscene="scene_grotto" />
-
 
 	</scene>
 
