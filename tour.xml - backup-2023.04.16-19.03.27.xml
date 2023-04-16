@@ -258,7 +258,6 @@
 	</action>
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-85.143" atv="-2.133" linkedscene="scene_kennedy_pano3" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="132.281" atv="-3.936" linkedscene="scene_img_2158_panorama" />
-		<hotspot name="spot3" style="skin_hotspotstyle" ath="68.771" atv="-5.237" linkedscene="scene_img_1971_panorama" />
 
 
 	</scene>
@@ -369,7 +368,7 @@
 	    distorted="true"
 	    crop="0|0|100|100"
 	    zorder="20"
-	   ath="-128.000" atv="-11.000" 
+	   ath="-128" atv="-11" 
 	    width="60"
 	    height="140"
 		rz="1"
@@ -386,7 +385,7 @@
 	    distorted="false"
 	    crop=""
 	    zorder="20"
-	    ath="-128.000" atv="0.000" 
+	    ath="-128" atv="0" 
 	    width="500"
 	    height="370"
 		rz="0"
@@ -404,7 +403,7 @@
 	    visible="false"
 	    distorted="false"
 		zorder="90"
-	    ath="-128.000" atv="3.000" 
+	    ath="-128" atv="3" 
 	    width="296"
 	    height="50"
 		rz="0"
@@ -449,7 +448,6 @@
 		delayedcall(.5, set(hotspot[tolfireImage].visible, false))
 	</action>
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="131.168" atv="-4.392" linkedscene="scene_grotto" />
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="-167.152" atv="-6.785" linkedscene="scene_img_1971_panorama" />
 
 
 	</scene>
@@ -657,8 +655,6 @@
 		<image hfov="360.0" vfov="0.0" voffset="0.0" prealign="null">
 			<sphere url="panos/IMG_1971_Panorama.tiles/pano_%v%h.jpg" multires="4000,8000x2474" />
 		</image>
-		<hotspot name="spot1" style="skin_hotspotstyle" ath="48.195" atv="-7.137" linkedscene="scene_img_2158_panorama" />
-		<hotspot name="spot2" style="skin_hotspotstyle" ath="88.929" atv="-7.295" linkedscene="scene_grotto" />
 
 	</scene>
 
