@@ -205,21 +205,21 @@
 	/>
 	<hotspot name="AlumniText"
 		url="textfield.swf"
-		html="Alumni hall is the oldest surviving building on campus, built in 1848, and expanded in 1873. This early photograph from between 1899 and 1903 shows the building among snow. The building was the main campus building for many years when Villanova was a much smaller institution. The age of the building, along with its alleged use as a hospital for civil war soldiers, has led to the creation of rumors that the building is haunted."
+		html="Alumni hall is the oldest surviving building on campus, built in 1848. This early photograph from between 1899 and 1903 shows the building among snow"
 		css="font-family:Arial; font-size:10px; color:#000000;"
 	    enabled="false"
 	    visible="false"
 	    distorted="true"
 		zorder="90"
 	    ath="145.000"
-	    atv="-19.000"
+	    atv="-22.000"
 	    width="296"
-	    height="80"
+	    height="40"
 		rz="0"
 		ry="0"
 		rx="0"
 	    edge="center"
-		alpha=".8"
+		alpha=".7"
 		background ="true"
 	/>
 	<action name="showAlumni">
@@ -256,162 +256,9 @@
 
 		delayedcall(.5, set(hotspot[AlumniImage].visible, false))
 	</action>
-	<!-- Rita image -->
-	<hotspot name="INFORita"
-	    url="infoicon.png"
-	    enabled="true"
-	    visible="true"
-	    distorted="true"
-	    crop="0|0|100|100"
-	    zorder="20"
-	    ath="90" atv="-7" 
-	    width="60"
-	    height="140"
-		rz="1"
-		ry="0"
-		rx="-75"
-	    edge="center"
-	    onclick="showRita()"
-	    keep="false"
-	/>
-		<hotspot name="RitaImage"
-	    url="Ritaold.jpg"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-	    crop=""
-	    zorder="20"
-	    ath="90" atv="-7" 
-	    width="500"
-	    height="370"
-		rz="0"
-		ry="0"
-		rx="10"
-	    edge="bottom"
-	    alpha="1"
-	    onclick="showBelle()"
-	/>
-	<hotspot name="BelleImage"
-	    url="belleair.jpg"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-	    crop=""
-	    zorder="20"
-	    ath="90" atv="-7" 
-	    width="500"
-	    height="370"
-		rz="0"
-		ry="0"
-		rx="10"
-	    edge="bottom"
-	    alpha="1"
-	    onclick="hideRita()"
-	/>
-	<hotspot name="RitaText"
-		url="textfield.swf"
-		html="St. Rita's hall was built in 1912 as a seminary to replace the Belle-Air mansion that had burned down that year. Built as a seminary, today it houses the Campus Ministry as well as student dorms. Click to see an early 1900s photograph of the Belle-Air mansion."
-		css="font-family:Arial; font-size:11px; color:#000000;"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-		zorder="90"
-	    ath="90" atv="-7" 
-	    width="296"
-	    height="65"
-		rz="0"
-		ry="0"
-		rx="0"
-	    edge="center"
-		alpha=".8"
-		background ="true"
-	/>
-	<hotspot name="BelleText"
-		url="textfield.swf"
-		html="The Belle Air mansion, built in 1806 was a part of the Belle-Air estate, owned by merchant and former Revolutionary War lieutenant John Rudolph. Rudolph was a Catholic and would even allow mass to be held at the estate. In 1841, 3 years after Rudolph's death, the estate was sold to the Augustinians, who used the land to establish a monastery and the college that became Villanova. The mansion had served many functions throughout Villanova's early history, including housing, a church, and a seminary."
-		css="font-family:Arial; font-size:11px; color:#000000;"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-		zorder="90"
-	    ath="90" atv="-5" 
-	    width="350"
-	    height="105"
-		rz="0"
-		ry="0"
-		rx="0"
-	    edge="center"
-		alpha=".8"
-		background ="true"
-	/>
-	<action name="showRita">
-    	set(hotspot[INFORita].visible, false);
-		set(hotspot[INFORita].enabled, false);
-		set(hotspot[RitaImage].alpha, 0);
-    	
-    	set(hotspot[RitaImage].height, 0.1);
-    	set(hotspot[RitaImage].visible, true);
-    	tween(hotspot[RitaImage].alpha, 1,.5,linear);
-    	tween(hotspot[RitaImage].height, 370, .5, linear, wait);
-
-    	set(hotspot[RitaTextBack].visible, true);
-		set(hotspot[RitaTextBack].alpha, 0);
-		tween(hotspot[RitaTextBack].alpha, 1,.5,linear, wait);
-
-		set(hotspot[RitaImage].enabled, true);
-		set(hotspot[foyer].enabled, false);
-		set(hotspot[RitaText].visible,true);
-	</action>
-	<action name="showBelle"> 
-    	
-    	set(hotspot[BelleImage].height, 0.1);
-    	set(hotspot[BelleImage].visible, true);
-    	tween(hotspot[BelleImage].alpha, 1,.5,linear);
-    	tween(hotspot[BelleImage].height, 370, .5, linear, wait);
-
-    	set(hotspot[BelleTextBack].visible, true);
-		set(hotspot[BelleTextBack].alpha, 0);
-		tween(hotspot[BelleTextBack].alpha, 1,.5,linear, wait);
-
-		set(hotspot[BelleImage].enabled, true);
-		set(hotspot[foyer].enabled, false);
-		set(hotspot[BelleText].visible,true);
-		
-		
-		tween(hotspot[RitaTextBack].alpha, 0, .5, linear);
-		tween(hotspot[RitaImage].alpha, 0, .5, linear);
-		tween(hotspot[RitaImage].height, 1, .5, linear, wait);
-		
-		set(hotspot[RitaImage].enabled, false);
-		set(hotspot[RitaImage].visible, false);
-		set(hotspot[RitaImage].alpha, 1);
-		set(hotspot[INFORita].visible, true);
-		set(hotspot[INFORita].enabled, true);
-		set(hotspot[foyer].enabled, true);
-		set(hotspot[RitaText].visible,false);
-
-		delayedcall(.5, set(hotspot[RitaImage].visible, false))
-	</action>
-
-	<action name="hideRita">
-		tween(hotspot[BelleTextBack].alpha, 0, .5, linear);
-		tween(hotspot[BelleImage].alpha, 0, .5, linear);
-		tween(hotspot[BelleImage].height, 1, .5, linear, wait);
-		
-		set(hotspot[BelleImage].enabled, false);
-		set(hotspot[BelleImage].visible, false);
-		set(hotspot[BelleImage].alpha, 1);
-		set(hotspot[INFORita].visible, true);
-		set(hotspot[INFORita].enabled, true);
-		set(hotspot[foyer].enabled, true);
-		set(hotspot[BelleText].visible,false);
-
-		delayedcall(.5, set(hotspot[BelleImage].visible, false))
-	</action>
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-85.143" atv="-2.133" linkedscene="scene_kennedy_pano3" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="132.281" atv="-3.936" linkedscene="scene_img_2158_panorama" />
 		<hotspot name="spot3" style="skin_hotspotstyle" ath="68.771" atv="-5.237" linkedscene="scene_img_1971_panorama" />
-
 
 
 	</scene>
@@ -953,7 +800,7 @@
 	    distorted="true"
 	    crop="0|0|100|100"
 	    zorder="20"
-	   ath="71" atv="-13"
+	    ath="11" atv="0" 
 	    width="60"
 	    height="140"
 		rz="1"
@@ -970,7 +817,7 @@
 	    distorted="false"
 	    crop=""
 	    zorder="20"
-	  ath="71" atv="-13"
+	   ath="20" atv="10" 
 	    width="800"
 	    height="300"
 		rz="0"
@@ -982,13 +829,13 @@
 	/>
 	<hotspot name="ChurchText"
 		url="textfield.swf"
-		html="The St. Thomas of Villanova Church, constructed in the Gothic Revival style, has long been the centerpiece of campus since its completion in 1887, with the building's architecture becoming symbolic of the University. The Church underwent major renovations in 1943 and 1992."
+		html="This image from 1918 shows the Villanova College Church Unit that had served in World War I. Villanova students have served in many US conflicts, including the Civil War, during which campus served as a military hospital for the Union Church."
 		css="font-family:Arial; font-size:11px; color:#000000;"
 	    enabled="false"
 	    visible="false"
 	    distorted="true"
 		zorder="90"
-	    ath="71" atv="-13"
+	    ath="20" atv="12" 
 	    width="296"
 	    height="65"
 		rz="0"
@@ -1040,7 +887,7 @@
 	    distorted="true"
 	    crop="0|0|100|100"
 	    zorder="20"
-	    ath="11.000" atv="0.000" 
+	    ath="11" atv="0" 
 	    width="60"
 	    height="140"
 		rz="1"
@@ -1057,7 +904,7 @@
 	    distorted="false"
 	    crop=""
 	    zorder="20"
-	   ath="20.000" atv="10.000" 
+	   ath="20" atv="10" 
 	    width="800"
 	    height="300"
 		rz="0"
@@ -1075,7 +922,7 @@
 	    visible="false"
 	    distorted="true"
 		zorder="90"
-	    ath="20.000" atv="12.000" 
+	    ath="20" atv="12" 
 	    width="296"
 	    height="65"
 		rz="0"
@@ -1121,6 +968,7 @@
 	</action>
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="48.195" atv="-7.137" linkedscene="scene_img_2158_panorama" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="88.929" atv="-7.295" linkedscene="scene_grotto" />
+
 
 	</scene>
 
