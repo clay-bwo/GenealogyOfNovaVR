@@ -1,4 +1,4 @@
-﻿<krpano version="1.20.11" title="Virtual Tour">
+<krpano version="1.20.11" title="Virtual Tour">
 
 	<include url="skin/vtourskin.xml" />
 
@@ -503,7 +503,7 @@
 	/>
 	<hotspot name="ConnellyText"
 		url="textfield.swf"
-		html="Connelly hall was completed in 1980. This image shows the dedication ceremony on September 21, 1980, with Cardinal Krol, the Archbishop of of Philadelphia, blessing the new building."
+		html="The Connelly Center was completed in 1980. This image shows the dedication ceremony on September 21, 1980, with Cardinal Krol, the Archbishop of of Philadelphia, blessing the new building."
 		css="font-family:Arial; font-size:12px; color:#000000;"
 	    enabled="false"
 	    visible="false"
@@ -553,6 +553,141 @@
 
 		delayedcall(.5, set(hotspot[ConnellyImage].visible, false))
 	</action>
+	<!-- Sky image -->
+	<hotspot name="INFOSky"
+	    url="infoicon.png"
+	    enabled="true"
+	    visible="true"
+	    distorted="true"
+	    crop="0|0|100|100"
+	    zorder="20"
+	    ath="120" atv="-33" 
+	    width="60"
+	    height="140"
+		rz="1"
+		ry="0"
+		rx="-75"
+	    edge="center"
+	    onclick="showSky()"
+	    keep="false"
+	/>
+		<hotspot name="SkyImage"
+	    url="sky1964.jpg"
+	    enabled="false"
+	    visible="false"
+	    distorted="true"
+	    crop=""
+	    zorder="20"
+	   ath="120" atv="-8" 
+	    width="600"
+	    height="350"
+		rz="0"
+		ry="0"
+		rx="0"
+	    edge="bottom"
+	    alpha="1"
+	    onclick="showSky2()"
+	/>
+	<hotspot name="SkyImage2"
+	    url="sky1950.jpg"
+	    enabled="false"
+	    visible="false"
+	    distorted="true"
+	    crop=""
+	    zorder="20"
+	   ath="120" atv="-8" 
+	    width="600"
+	    height="350"
+		rz="0"
+		ry="0"
+		rx="0"
+	    edge="bottom"
+	    alpha="1"
+	    onclick="hideSky()"
+	/>
+	<hotspot name="SkyText"
+		url="textfield.swf"
+		html="Villanova's history is a history of change. This aerial view taken in 1964 shows campus at the time. The university and its facilities have expanded significantly since then. Click on the image to Villanova's even smaller campus in 1950"
+		css="font-family:Arial; font-size:12px; color:#000000;"
+	    enabled="false"
+	    visible="false"
+	    distorted="false"
+		zorder="90"
+	    ath="120" atv="-4.5" 
+	    width="296"
+	    height="75"
+		rz="0"
+		ry="0"
+		rx="0"
+	    edge="center"
+		alpha=".7"
+		background ="true"
+	/>
+	<action name="showSky">
+    	set(hotspot[INFOSky].visible, false);
+		set(hotspot[INFOSky].enabled, false);
+		set(hotspot[SkyImage].alpha, 0);
+    	
+    	set(hotspot[SkyImage].height, 0.1);
+    	set(hotspot[SkyImage].visible, true);
+    	tween(hotspot[SkyImage].alpha, 1,.5,linear);
+    	tween(hotspot[SkyImage].height, 350, .5, linear, wait);
+
+    	set(hotspot[SkyTextBack].visible, true);
+		set(hotspot[SkyTextBack].alpha, 0);
+		tween(hotspot[SkyTextBack].alpha, 1,.5,linear, wait);
+
+		set(hotspot[SkyImage].enabled, true);
+		set(hotspot[foyer].enabled, false);
+		set(hotspot[SkyText].visible,true);
+	</action>
+	<action name="showSky2">
+		set(hotspot[SkyImage2].alpha, 0);
+    	
+    	set(hotspot[SkyImage2].height, 0.1);
+    	set(hotspot[SkyImage2].visible, true);
+    	tween(hotspot[SkyImage2].alpha, 1,.5,linear);
+    	tween(hotspot[SkyImage2].height, 350, .5, linear, wait);
+
+    	set(hotspot[SkyTextBack].visible, true);
+		set(hotspot[SkyTextBack].alpha, 0);
+		tween(hotspot[SkyTextBack].alpha, 1,.5,linear, wait);
+
+		set(hotspot[SkyImage2].enabled, true);
+		set(hotspot[foyer].enabled, false);
+		set(hotspot[SkyText].visible,true);
+		
+		
+		tween(hotspot[SkyTextBack].alpha, 0, .5, linear);
+		tween(hotspot[SkyImage].alpha, 0, .5, linear);
+		tween(hotspot[SkyImage].height, 1, .5, linear, wait);
+		
+		set(hotspot[SkyImage].enabled, false);
+		set(hotspot[SkyImage].visible, false);
+		set(hotspot[SkyImage].alpha, 1);
+		set(hotspot[INFOSky].visible, true);
+		set(hotspot[INFOSky].enabled, true);
+		set(hotspot[foyer].enabled, true);
+		set(hotspot[SkyText].visible,false);
+
+		delayedcall(.5, set(hotspot[SkyImage].visible, false))
+	</action>
+
+	<action name="hideSky">
+		tween(hotspot[SkyTextBack].alpha, 0, .5, linear);
+		tween(hotspot[SkyImage2].alpha, 0, .5, linear);
+		tween(hotspot[SkyImage2].height, 1, .5, linear, wait);
+		
+		set(hotspot[SkyImage2].enabled, false);
+		set(hotspot[SkyImage2].visible, false);
+		set(hotspot[SkyImage2].alpha, 1);
+		set(hotspot[INFOSky].visible, true);
+		set(hotspot[INFOSky].enabled, true);
+		set(hotspot[foyer].enabled, true);
+		set(hotspot[SkyText].visible,false);
+
+		delayedcall(.5, set(hotspot[SkyImage2].visible, false))
+	</action>
 			<!-- Kennedy image -->
 	<hotspot name="INFOKennedy"
 	    url="infoicon.png"
@@ -591,7 +726,7 @@
 	/>
 	<hotspot name="KennedyText"
 		url="textfield.swf"
-		html="Kennedy hall was built in 19??, and was named for US President John F. Kennedy in 1969. JFK received an honorary diploma from Villanova in 1957."
+		html="Kennedy hall was built in 1969, and was named for US President John F. Kennedy in 1969. JFK received an honorary diploma from Villanova in 1957."
 		css="font-family:Arial; font-size:12px; color:#000000;"
 	    enabled="false"
 	    visible="false"
