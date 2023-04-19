@@ -99,7 +99,7 @@
 	    keep="false"
 	/>
 		<hotspot name="AustinImage"
-	    url="Austinold.jpg"
+	    url="austinold.jpg"
 	    enabled="false"
 	    visible="false"
 	    distorted="false"
@@ -186,7 +186,7 @@
 	    keep="false"
 	/>
 		<hotspot name="AlumniImage"
-	    url="Alumniold.jpg"
+	    url="alumniold.jpg"
 	    enabled="false"
 	    visible="false"
 	    distorted="false"
@@ -275,7 +275,7 @@
 	    keep="false"
 	/>
 		<hotspot name="RitaImage"
-	    url="Ritaold.jpg"
+	    url="ritaold.jpg"
 	    enabled="false"
 	    visible="false"
 	    distorted="false"
@@ -964,7 +964,7 @@
 	    keep="false"
 	/>
 		<hotspot name="ChurchImage"
-	    url="Churchold.jpg"
+	    url="churchold.jpg"
 	    enabled="false"
 	    visible="false"
 	    distorted="false"
