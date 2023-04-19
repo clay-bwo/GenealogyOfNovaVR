@@ -1,4 +1,4 @@
-<krpano version="1.20.11" title="Virtual Tour">
+﻿<krpano version="1.20.11" title="Virtual Tour">
 
 	<include url="skin/vtourskin.xml" />
 
@@ -72,7 +72,7 @@
 		
 		<control bouncinglimits="true" />
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="96.384615" maxpixelzoom="1.8" fovmin="45.641302" fovmax="96.384615" limitview="range" vlookatmin="-62.333333" vlookatmax="23.358768" hlookatmin="-180.0" hlookatmax="180.0"/>
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="73.435897" maxpixelzoom="1.8" fovmin="28.705428" fovmax="73.435897" limitview="range" vlookatmin="-62.333333" vlookatmax="23.358768" hlookatmin="-180.0" hlookatmax="180.0"/>
 
 		<preview url="panos/grotto.tiles/preview.jpg" />
 
@@ -99,7 +99,7 @@
 	    keep="false"
 	/>
 		<hotspot name="AustinImage"
-	    url="austinold.jpg"
+	    url="Austinold.jpg"
 	    enabled="false"
 	    visible="false"
 	    distorted="false"
@@ -186,7 +186,7 @@
 	    keep="false"
 	/>
 		<hotspot name="AlumniImage"
-	    url="alumniold.jpg"
+	    url="Alumniold.jpg"
 	    enabled="false"
 	    visible="false"
 	    distorted="false"
@@ -275,7 +275,7 @@
 	    keep="false"
 	/>
 		<hotspot name="RitaImage"
-	    url="ritaold.jpg"
+	    url="Ritaold.jpg"
 	    enabled="false"
 	    visible="false"
 	    distorted="false"
@@ -311,14 +311,14 @@
 	<hotspot name="RitaText"
 		url="textfield.swf"
 		html="St. Rita's hall was built in 1912(shown here in 1913) as a seminary to replace the Belle-Air mansion that had burned down that year. Built as a seminary, today it houses the Campus Ministry as well as student dorms. It is currently undergoing major rennovation works. Click to see an early 1900s photograph of the Belle-Air mansion."
-		css="font-family:Arial; font-size:13px; color:#000000;"
+		css="font-family:Arial; font-size:11px; color:#000000;"
 	    enabled="false"
 	    visible="false"
 	    distorted="false"
 		zorder="90"
-	    ath="90" atv="-4.5" 
-	    width="495"
-	    height="85"
+	    ath="90" atv="-7" 
+	    width="350"
+	    height="65"
 		rz="0"
 		ry="0"
 		rx="0"
@@ -329,14 +329,14 @@
 	<hotspot name="BelleText"
 		url="textfield.swf"
 		html="The Belle Air mansion, built in 1806 was a part of the Belle-Air estate, owned by merchant and former Revolutionary War lieutenant John Rudolph. Rudolph was a Catholic and would even allow mass to be held at the estate. In 1841, 3 years after Rudolph's death, the estate was sold to the Augustinians, who used the land to establish a monastery and the college that became Villanova. The mansion had served many functions throughout Villanova's early history, including housing, a church, and a seminary."
-		css="font-family:Arial; font-size:13px; color:#000000;"
+		css="font-family:Arial; font-size:11px; color:#000000;"
 	    enabled="false"
 	    visible="false"
 	    distorted="false"
 		zorder="90"
-	    ath="90" atv="-3.5" 
-	    width="495"
-	    height="115"
+	    ath="90" atv="-5" 
+	    width="350"
+	    height="105"
 		rz="0"
 		ry="0"
 		rx="0"
@@ -964,7 +964,7 @@
 	    keep="false"
 	/>
 		<hotspot name="ChurchImage"
-	    url="churchold.jpg"
+	    url="Churchold.jpg"
 	    enabled="false"
 	    visible="false"
 	    distorted="false"
