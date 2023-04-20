@@ -876,6 +876,31 @@
 		<image prealign="null">
 			<cube url="panos/kennedy_pano3.tiles/pano_%s.jpg" />
 		</image>
+		<hotspot name="kennedyBell"
+	    url="bell.png"
+	    enabled="true"
+	    visible="true"
+	    distorted="false"
+	    crop="0|0|100|100"
+	    zorder="20"
+	  ath="-90.506" atv="-35" 
+	    width="80"
+	    height="100"
+		rz="1"
+		ry="0"
+		rx="-75"
+	    edge="center"
+	    onclick="ringBell()"
+	    keep="false"
+	/>
+	<action name="ringBell">
+	if(sound[s1],
+			destroysound(s1);
+		  ,
+			playsound_at_hotspot(s1, 'bell2.mp3', get(name), true, 1.0);
+			asyncloop(sound[s1], calc(scale,0.1+0.005*random); );
+		);
+	</action>
 		<!-- Connelly image -->
 	<hotspot name="INFOConnelly"
 	    url="infoicon.png"
