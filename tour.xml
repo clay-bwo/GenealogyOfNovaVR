@@ -81,7 +81,7 @@
 	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
 <scene name="scene_grotto" title="grotto" onstart="" thumburl="panos/grotto.tiles/thumb.jpg" lat="" lng="" heading="">
 <events name="currentpano"
-	        onnewpano="playsound(forset, 'forest.mp3',1);"
+	        onnewpano="playsound(forset, 'forest.mp3',true);"
 	        onremovepano="stopsound(bgsnd);"
 	        />
 
@@ -117,8 +117,7 @@
 	if(sound[s1],
 			destroysound(s1);
 		  ,
-			playsound_at_hotspot(s1, 'bell2.mp3', get(name), true, 1.0);
-			asyncloop(sound[s1], calc(scale,0.1+0.005*random); );
+			playsound_at_hotspot(s1, 'bell2.mp3', get(name), false, 1.0,);
 		);
 	</action>
 		
@@ -891,14 +890,12 @@
 		rx="-75"
 	    edge="center"
 	    onclick="ringBell()"
-	    keep="false"
 	/>
 	<action name="ringBell">
 	if(sound[s1],
 			destroysound(s1);
 		  ,
-			playsound_at_hotspot(s1, 'bell2.mp3', get(name), true, 1.0);
-			asyncloop(sound[s1], calc(scale,0.1+0.005*random); );
+			playsound_at_hotspot(s1, 'bell2.mp3', get(name), false, 1.0);
 		);
 	</action>
 		<!-- Connelly image -->
