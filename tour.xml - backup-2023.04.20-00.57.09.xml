@@ -95,32 +95,23 @@
 		<image prealign="null">
 			<cube url="panos/grotto.tiles/pano_%s.jpg" />
 		</image>
-		
 		<hotspot name="grottoBell"
 	    url="bell.png"
 	    enabled="true"
 	    visible="true"
-	    distorted="false"
+	    distorted="true"
 	    crop="0|0|100|100"
 	    zorder="20"
-	  ath="-112.506" atv="-11.325" 
-	    width="80"
-	    height="100"
+	    ath="-21.088" atv="-1.832" 
+	    width="60"
+	    height="140"
 		rz="1"
 		ry="0"
 		rx="-75"
 	    edge="center"
-	    onclick="ringBell()"
+	    onclick="showAustin()"
 	    keep="false"
 	/>
-	<action name="ringBell">
-	if(sound[s1],
-			destroysound(s1);
-		  ,
-			playsound_at_hotspot(s1, 'bell2.mp3', get(name), true, 1.0);
-			asyncloop(sound[s1], calc(scale,0.1+0.005*random); );
-		);
-	</action>
 		
 		<!-- Austin image -->
 		<hotspot name="INFOAustin"
@@ -306,7 +297,7 @@
 	    distorted="true"
 	    crop="0|0|100|100"
 	    zorder="20"
-	    ath="90.000" atv="-7.000" 
+	    ath="90" atv="-7" 
 	    width="60"
 	    height="140"
 		rz="1"
@@ -323,7 +314,7 @@
 	    distorted="false"
 	    crop=""
 	    zorder="20"
-	    ath="90.000" atv="-7.000" 
+	    ath="90" atv="-7" 
 	    width="500"
 	    height="370"
 		rz="0"
@@ -340,7 +331,7 @@
 	    distorted="false"
 	    crop=""
 	    zorder="20"
-	    ath="90.000" atv="-7.000" 
+	    ath="90" atv="-7" 
 	    width="500"
 	    height="370"
 		rz="0"
@@ -358,7 +349,7 @@
 	    visible="false"
 	    distorted="false"
 		zorder="90"
-	    ath="90.000" atv="-4.500" 
+	    ath="90" atv="-4.5" 
 	    width="495"
 	    height="85"
 		rz="0"
@@ -376,7 +367,7 @@
 	    visible="false"
 	    distorted="false"
 		zorder="90"
-	    ath="90.000" atv="-3.500" 
+	    ath="90" atv="-3.5" 
 	    width="495"
 	    height="115"
 		rz="0"
@@ -453,6 +444,8 @@
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-85.143" atv="-2.133" linkedscene="scene_kennedy_pano3" />
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="132.281" atv="-3.936" linkedscene="scene_img_2158_panorama" />
 		<hotspot name="spot3" style="skin_hotspotstyle" ath="68.771" atv="-5.237" linkedscene="scene_img_1971_panorama" />
+
+
 
 	</scene>
 
