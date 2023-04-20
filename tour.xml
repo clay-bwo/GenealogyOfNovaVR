@@ -1,4 +1,4 @@
-﻿<krpano version="1.20.11" title="Virtual Tour">
+<krpano version="1.20.11" title="Virtual Tour">
 
 	<include url="skin/vtourskin.xml" />
 
@@ -460,11 +460,11 @@
 		rx="10"
 	    edge="bottom"
 	    alpha="1"
-	    onclick="hideVillan()"
+	    onclick="showVillan2()"
 	/>
 	<hotspot name="VillanText"
 		url="textfield.swf"
-		html="John Villan hall was built in 1947 to serve Villanova's Naval ROTC. It was named after Commodore John Villan, an American revolutionary regarded as the Father of the US Navy."
+		html="For a period of Villanova's history the Wildcat mascot was a literal, feral, baby wildcat. Pictured is Count Villan II, one of 4 mascots named Count Villan. Click to see more of Count Villan's story."
 		css="font-family:Arial; font-size:13px; color:#000000;"
 	    enabled="false"
 	    visible="false"
@@ -498,8 +498,93 @@
 		set(hotspot[foyer].enabled, false);
 		set(hotspot[VillanText].visible,true);
 	</action>
+	
+	<hotspot name="Villan2Image"
+	    url="countvillan2.jpg"
+	    enabled="false"
+	    visible="false"
+	    distorted="false"
+	    crop=""
+	    zorder="20"
+	    ath="70" atv="-3" 
+	    width="500"
+	    height="370"
+		rz="0"
+		ry="0"
+		rx="10"
+	    edge="bottom"
+	    alpha="1"
+	    onclick="showVillan3()"
+	/>
+	<hotspot name="Villan2Text"
+		url="textfield.swf"
+		html="Count Villan II pictured with members of the football team, 1945."
+		css="font-family:Arial; font-size:13px; color:#000000;"
+	    enabled="false"
+	    visible="false"
+	    distorted="false"
+		zorder="90"
+	    ath="70" atv="-3" 
+	    width="500"
+	    height="50"
+		rz="0"
+		ry="0"
+		rx="0"
+	    edge="center"
+		alpha=".7"
+		background ="true"
+	/>
+	<hotspot name="Villan3Image"
+	    url="villangoat.jpg"
+	    enabled="false"
+	    visible="false"
+	    distorted="false"
+	    crop=""
+	    zorder="20"
+	    ath="70" atv="-3" 
+	    width="500"
+	    height="370"
+		rz="0"
+		ry="0"
+		rx="10"
+	    edge="bottom"
+	    alpha="1"
+	    onclick="hideVillan()"
+	/>
+	<hotspot name="Villan3Text"
+		url="textfield.swf"
+		html="Count Villan II meeting the Navy football team's goat mascot at the Villanova Navy game, 1945."
+		css="font-family:Arial; font-size:13px; color:#000000;"
+	    enabled="false"
+	    visible="false"
+	    distorted="false"
+		zorder="90"
+	    ath="70" atv="-3" 
+	    width="500"
+	    height="50"
+		rz="0"
+		ry="0"
+		rx="0"
+	    edge="center"
+		alpha=".7"
+		background ="true"
+	/>
+<action name="showVillan2">
+		set(hotspot[Villan2Image].alpha, 0);
+    	
+    	set(hotspot[Villan2Image].height, 0.1);
+    	set(hotspot[Villan2Image].visible, true);
+    	tween(hotspot[Villan2Image].alpha, 1,.5,linear);
+    	tween(hotspot[Villan2Image].height, 370, .5, linear, wait);
 
-	<action name="hideVillan">
+    	set(hotspot[VillanTextBack].visible, true);
+		set(hotspot[VillanTextBack].alpha, 0);
+		tween(hotspot[VillanTextBack].alpha, 1,.5,linear, wait);
+
+		set(hotspot[Villan2Image].enabled, true);
+		set(hotspot[foyer].enabled, false);
+		set(hotspot[Villan2Text].visible,true);
+		
 		tween(hotspot[VillanTextBack].alpha, 0, .5, linear);
 		tween(hotspot[VillanImage].alpha, 0, .5, linear);
 		tween(hotspot[VillanImage].height, 1, .5, linear, wait);
@@ -513,6 +598,52 @@
 		set(hotspot[VillanText].visible,false);
 
 		delayedcall(.5, set(hotspot[VillanImage].visible, false))
+	</action>
+	<action name="showVillan3">
+		set(hotspot[Villan3Image].alpha, 0);
+    	
+    	set(hotspot[Villan3Image].height, 0.1);
+    	set(hotspot[Villan3Image].visible, true);
+    	tween(hotspot[Villan3Image].alpha, 1,.5,linear);
+    	tween(hotspot[Villan3Image].height, 370, .5, linear, wait);
+
+    	set(hotspot[VillanTextBack].visible, true);
+		set(hotspot[VillanTextBack].alpha, 0);
+		tween(hotspot[VillanTextBack].alpha, 1,.5,linear, wait);
+
+		set(hotspot[Villan3Image].enabled, true);
+		set(hotspot[foyer].enabled, false);
+		set(hotspot[Villan3Text].visible,true);
+		
+		tween(hotspot[VillanTextBack].alpha, 0, .5, linear);
+		tween(hotspot[Villan2Image].alpha, 0, .5, linear);
+		tween(hotspot[Villan2Image].height, 1, .5, linear, wait);
+		
+		set(hotspot[Villan2Image].enabled, false);
+		set(hotspot[Villan2Image].visible, false);
+		set(hotspot[Villan2Image].alpha, 1);
+		set(hotspot[INFOVillan].visible, true);
+		set(hotspot[INFOVillan].enabled, true);
+		set(hotspot[foyer].enabled, true);
+		set(hotspot[Villan2Text].visible,false);
+
+		delayedcall(.5, set(hotspot[Villan2Image].visible, false))
+	</action>
+
+	<action name="hideVillan">
+		tween(hotspot[VillanTextBack].alpha, 0, .5, linear);
+		tween(hotspot[Villan3Image].alpha, 0, .5, linear);
+		tween(hotspot[Villan3Image].height, 1, .5, linear, wait);
+		
+		set(hotspot[Villan3Image].enabled, false);
+		set(hotspot[Villan3Image].visible, false);
+		set(hotspot[Villan3Image].alpha, 1);
+		set(hotspot[INFOVillan].visible, true);
+		set(hotspot[INFOVillan].enabled, true);
+		set(hotspot[foyer].enabled, true);
+		set(hotspot[Villan3Text].visible,false);
+
+		delayedcall(.5, set(hotspot[Villan3Image].visible, false))
 	</action>
 		<!-- Barry image -->
 	<hotspot name="INFOBarry"
