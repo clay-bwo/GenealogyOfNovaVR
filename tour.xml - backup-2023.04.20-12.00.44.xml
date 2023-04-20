@@ -693,7 +693,7 @@
 	    distorted="true"
 	    crop="0|0|100|100"
 	    zorder="20"
-	  ath="105.000" atv="-4.5" 
+	  ath="70.000" atv="-3.000" 
 	    width="60"
 	    height="140"
 		rz="180"
@@ -704,13 +704,13 @@
 	    keep="false"
 	/>
 		<hotspot name="PresImage"
-	    url="taft.jpg"
+	    url="countPresportrait.jpg"
 	    enabled="false"
 	    visible="false"
 	    distorted="false"
 	    crop=""
 	    zorder="20"
-	    ath="105.000" atv="-4.5" 
+	    ath="70.000" atv="-3.000" 
 	    width="500"
 	    height="370"
 		rz="0"
@@ -722,13 +722,13 @@
 	/>
 	<hotspot name="PresText"
 		url="textfield.swf"
-		html="Numerous presidents have visited campus at points throughout Villanova's history. President Taft visited Villanova and spoke at commencement in 1910. Here he is pictured with Reverend Lawrence A. Delurey, O.S.A, President of Villanova at the time. Click to see info about other presidential visits."
+		html="For a period of Presova's history the Wildcat mascot was a literal, feral, baby wildcat. Pictured is Count Pres II, one of 4 mascots named Count Pres. Click to see more of Count Pres's story."
 		css="font-family:Arial; font-size:13px; color:#000000;"
 	    enabled="false"
 	    visible="false"
 	    distorted="false"
 		zorder="90"
-	    ath="105.000" atv="-4.5" 
+	    ath="70.000" atv="-3.000" 
 	    width="500"
 	    height="50"
 		rz="0"
@@ -758,13 +758,13 @@
 	</action>
 	
 	<hotspot name="Pres2Image"
-	    url="jfk.jpg"
+	    url="countPres2.jpg"
 	    enabled="false"
 	    visible="false"
 	    distorted="false"
 	    crop=""
 	    zorder="20"
-	    ath="105.000" atv="-4.5" 
+	    ath="70.000" atv="-3.000" 
 	    width="500"
 	    height="370"
 		rz="0"
@@ -782,7 +782,7 @@
 	    visible="false"
 	    distorted="false"
 		zorder="90"
-	    ath="105.000" atv="-4.5" 
+	    ath="70.000" atv="-3.000" 
 	    width="500"
 	    height="50"
 		rz="0"
@@ -793,13 +793,13 @@
 		background ="true"
 	/>
 	<hotspot name="Pres3Image"
-	    url="ford.jpg"
+	    url="Presgoat.jpg"
 	    enabled="false"
 	    visible="false"
 	    distorted="false"
 	    crop=""
 	    zorder="20"
-	    ath="105.000" atv="-4.5" 
+	    ath="70.000" atv="-3.000" 
 	    width="500"
 	    height="370"
 		rz="0"
@@ -817,7 +817,7 @@
 	    visible="false"
 	    distorted="false"
 		zorder="90"
-	    ath="105.000" atv="-4.5" 
+	    ath="70.000" atv="-3.000" 
 	    width="500"
 	    height="50"
 		rz="0"
@@ -1082,7 +1082,7 @@
 	</action>
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="131.168" atv="-4.392" linkedscene="scene_grotto" />
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-167.152" atv="-6.785" linkedscene="scene_img_1971_panorama" />
-
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="105" atv="-4.503" linkedscene="scene_img_2158_panorama" />
 
 	</scene>
 

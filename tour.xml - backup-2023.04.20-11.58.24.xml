@@ -474,7 +474,7 @@
 	    distorted="true"
 	    crop="0|0|100|100"
 	    zorder="20"
-	  ath="70.000" atv="-3.000" 
+	  ath="70" atv="-3" 
 	    width="60"
 	    height="140"
 		rz="180"
@@ -491,7 +491,7 @@
 	    distorted="false"
 	    crop=""
 	    zorder="20"
-	    ath="70.000" atv="-3.000" 
+	    ath="70" atv="-3" 
 	    width="500"
 	    height="370"
 		rz="0"
@@ -509,7 +509,7 @@
 	    visible="false"
 	    distorted="false"
 		zorder="90"
-	    ath="70.000" atv="-3.000" 
+	    ath="70" atv="-3" 
 	    width="500"
 	    height="50"
 		rz="0"
@@ -545,7 +545,7 @@
 	    distorted="false"
 	    crop=""
 	    zorder="20"
-	    ath="70.000" atv="-3.000" 
+	    ath="70" atv="-3" 
 	    width="500"
 	    height="370"
 		rz="0"
@@ -563,7 +563,7 @@
 	    visible="false"
 	    distorted="false"
 		zorder="90"
-	    ath="70.000" atv="-3.000" 
+	    ath="70" atv="-3" 
 	    width="500"
 	    height="50"
 		rz="0"
@@ -580,7 +580,7 @@
 	    distorted="false"
 	    crop=""
 	    zorder="20"
-	    ath="70.000" atv="-3.000" 
+	    ath="70" atv="-3" 
 	    width="500"
 	    height="370"
 		rz="0"
@@ -598,7 +598,7 @@
 	    visible="false"
 	    distorted="false"
 		zorder="90"
-	    ath="70.000" atv="-3.000" 
+	    ath="70" atv="-3" 
 	    width="500"
 	    height="50"
 		rz="0"
@@ -684,228 +684,6 @@
 
 		delayedcall(.5, set(hotspot[Villan3Image].visible, false))
 	</action>
-	<!-- presidents -->
-	
-	<hotspot name="INFOPres"
-	    url="infoicon.png"
-	    enabled="true"
-	    visible="true"
-	    distorted="true"
-	    crop="0|0|100|100"
-	    zorder="20"
-	  ath="105.000" atv="-4.5" 
-	    width="60"
-	    height="140"
-		rz="180"
-		ry="180"
-		rx="-75"
-	    edge="center"
-	    onclick="showPres()"
-	    keep="false"
-	/>
-		<hotspot name="PresImage"
-	    url="taft.jpg"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-	    crop=""
-	    zorder="20"
-	    ath="105.000" atv="-4.5" 
-	    width="500"
-	    height="370"
-		rz="0"
-		ry="0"
-		rx="10"
-	    edge="bottom"
-	    alpha="1"
-	    onclick="showPres2()"
-	/>
-	<hotspot name="PresText"
-		url="textfield.swf"
-		html="Numerous presidents have visited campus at points throughout Villanova's history. President Taft visited Villanova and spoke at commencement in 1910. Here he is pictured with Reverend Lawrence A. Delurey, O.S.A, President of Villanova at the time. Click to see info about other presidential visits."
-		css="font-family:Arial; font-size:13px; color:#000000;"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-		zorder="90"
-	    ath="105.000" atv="-4.5" 
-	    width="500"
-	    height="50"
-		rz="0"
-		ry="0"
-		rx="0"
-	    edge="center"
-		alpha=".7"
-		background ="true"
-	/>
-	<action name="showPres">
-    	set(hotspot[INFOPres].visible, false);
-		set(hotspot[INFOPres].enabled, false);
-		set(hotspot[PresImage].alpha, 0);
-    	
-    	set(hotspot[PresImage].height, 0.1);
-    	set(hotspot[PresImage].visible, true);
-    	tween(hotspot[PresImage].alpha, 1,.5,linear);
-    	tween(hotspot[PresImage].height, 370, .5, linear, wait);
-
-    	set(hotspot[PresTextBack].visible, true);
-		set(hotspot[PresTextBack].alpha, 0);
-		tween(hotspot[PresTextBack].alpha, 1,.5,linear, wait);
-
-		set(hotspot[PresImage].enabled, true);
-		set(hotspot[foyer].enabled, false);
-		set(hotspot[PresText].visible,true);
-	</action>
-	
-	<hotspot name="Pres2Image"
-	    url="jfk.jpg"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-	    crop=""
-	    zorder="20"
-	    ath="105.000" atv="-4.5" 
-	    width="500"
-	    height="370"
-		rz="0"
-		ry="0"
-		rx="10"
-	    edge="bottom"
-	    alpha="1"
-	    onclick="showPres3()"
-	/>
-	<hotspot name="Pres2Text"
-		url="textfield.swf"
-		html="Count Pres II pictured with members of the football team, 1945."
-		css="font-family:Arial; font-size:13px; color:#000000;"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-		zorder="90"
-	    ath="105.000" atv="-4.5" 
-	    width="500"
-	    height="50"
-		rz="0"
-		ry="0"
-		rx="0"
-	    edge="center"
-		alpha=".7"
-		background ="true"
-	/>
-	<hotspot name="Pres3Image"
-	    url="ford.jpg"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-	    crop=""
-	    zorder="20"
-	    ath="105.000" atv="-4.5" 
-	    width="500"
-	    height="370"
-		rz="0"
-		ry="0"
-		rx="10"
-	    edge="bottom"
-	    alpha="1"
-	    onclick="hidePres()"
-	/>
-	<hotspot name="Pres3Text"
-		url="textfield.swf"
-		html="Count Pres II meeting the Navy football team's goat mascot at the Presova Navy game, 1945."
-		css="font-family:Arial; font-size:13px; color:#000000;"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-		zorder="90"
-	    ath="105.000" atv="-4.5" 
-	    width="500"
-	    height="50"
-		rz="0"
-		ry="0"
-		rx="0"
-	    edge="center"
-		alpha=".7"
-		background ="true"
-	/>
-<action name="showPres2">
-		set(hotspot[Pres2Image].alpha, 0);
-    	
-    	set(hotspot[Pres2Image].height, 0.1);
-    	set(hotspot[Pres2Image].visible, true);
-    	tween(hotspot[Pres2Image].alpha, 1,.5,linear);
-    	tween(hotspot[Pres2Image].height, 370, .5, linear, wait);
-
-    	set(hotspot[PresTextBack].visible, true);
-		set(hotspot[PresTextBack].alpha, 0);
-		tween(hotspot[PresTextBack].alpha, 1,.5,linear, wait);
-
-		set(hotspot[Pres2Image].enabled, true);
-		set(hotspot[foyer].enabled, false);
-		set(hotspot[Pres2Text].visible,true);
-		
-		tween(hotspot[PresTextBack].alpha, 0, .5, linear);
-		tween(hotspot[PresImage].alpha, 0, .5, linear);
-		tween(hotspot[PresImage].height, 1, .5, linear, wait);
-		
-		set(hotspot[PresImage].enabled, false);
-		set(hotspot[PresImage].visible, false);
-		set(hotspot[PresImage].alpha, 1);
-		set(hotspot[INFOPres].visible, true);
-		set(hotspot[INFOPres].enabled, true);
-		set(hotspot[foyer].enabled, true);
-		set(hotspot[PresText].visible,false);
-
-		delayedcall(.5, set(hotspot[PresImage].visible, false))
-	</action>
-	<action name="showPres3">
-		set(hotspot[Pres3Image].alpha, 0);
-    	
-    	set(hotspot[Pres3Image].height, 0.1);
-    	set(hotspot[Pres3Image].visible, true);
-    	tween(hotspot[Pres3Image].alpha, 1,.5,linear);
-    	tween(hotspot[Pres3Image].height, 370, .5, linear, wait);
-
-    	set(hotspot[PresTextBack].visible, true);
-		set(hotspot[PresTextBack].alpha, 0);
-		tween(hotspot[PresTextBack].alpha, 1,.5,linear, wait);
-
-		set(hotspot[Pres3Image].enabled, true);
-		set(hotspot[foyer].enabled, false);
-		set(hotspot[Pres3Text].visible,true);
-		
-		tween(hotspot[PresTextBack].alpha, 0, .5, linear);
-		tween(hotspot[Pres2Image].alpha, 0, .5, linear);
-		tween(hotspot[Pres2Image].height, 1, .5, linear, wait);
-		
-		set(hotspot[Pres2Image].enabled, false);
-		set(hotspot[Pres2Image].visible, false);
-		set(hotspot[Pres2Image].alpha, 1);
-		set(hotspot[INFOPres].visible, true);
-		set(hotspot[INFOPres].enabled, true);
-		set(hotspot[foyer].enabled, true);
-		set(hotspot[Pres2Text].visible,false);
-
-		delayedcall(.5, set(hotspot[Pres2Image].visible, false))
-	</action>
-
-	<action name="hidePres">
-		tween(hotspot[PresTextBack].alpha, 0, .5, linear);
-		tween(hotspot[Pres3Image].alpha, 0, .5, linear);
-		tween(hotspot[Pres3Image].height, 1, .5, linear, wait);
-		
-		set(hotspot[Pres3Image].enabled, false);
-		set(hotspot[Pres3Image].visible, false);
-		set(hotspot[Pres3Image].alpha, 1);
-		set(hotspot[INFOPres].visible, true);
-		set(hotspot[INFOPres].enabled, true);
-		set(hotspot[foyer].enabled, true);
-		set(hotspot[Pres3Text].visible,false);
-
-		delayedcall(.5, set(hotspot[Pres3Image].visible, false))
-	</action>
-
-	
-	
 		<!-- Barry image -->
 	<hotspot name="INFOBarry"
 	    url="infoicon.png"
@@ -1082,7 +860,6 @@
 	</action>
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="131.168" atv="-4.392" linkedscene="scene_grotto" />
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-167.152" atv="-6.785" linkedscene="scene_img_1971_panorama" />
-
 
 	</scene>
 
