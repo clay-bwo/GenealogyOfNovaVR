@@ -730,7 +730,7 @@
 		zorder="90"
 	    ath="105.000" atv="-4.5" 
 	    width="500"
-	    height="50"
+	    height="70"
 		rz="0"
 		ry="0"
 		rx="0"
@@ -776,7 +776,7 @@
 	/>
 	<hotspot name="Pres2Text"
 		url="textfield.swf"
-		html="Count Pres II pictured with members of the football team, 1945."
+		html="Pictured is President John F Kennedy, during his time as Senator, with Villanova President Reverend James A Donnellon, O.S.A., Ph.D in 1957, with JFK receiving an honorary Villanova Law School degree."
 		css="font-family:Arial; font-size:13px; color:#000000;"
 	    enabled="false"
 	    visible="false"
@@ -807,11 +807,11 @@
 		rx="10"
 	    edge="bottom"
 	    alpha="1"
-	    onclick="hidePres()"
+	    onclick="showPres4()"
 	/>
 	<hotspot name="Pres3Text"
 		url="textfield.swf"
-		html="Count Pres II meeting the Navy football team's goat mascot at the Presova Navy game, 1945."
+		html="President Gerald Ford visiting Villanova during his presidential campaign in 1976."
 		css="font-family:Arial; font-size:13px; color:#000000;"
 	    enabled="false"
 	    visible="false"
@@ -827,6 +827,42 @@
 		alpha=".7"
 		background ="true"
 	/>
+	<hotspot name="Pres4Image"
+	    url="bush.jpg"
+	    enabled="false"
+	    visible="false"
+	    distorted="false"
+	    crop=""
+	    zorder="20"
+	    ath="105.000" atv="-4.5" 
+	    width="500"
+	    height="370"
+		rz="0"
+		ry="0"
+		rx="10"
+	    edge="bottom"
+	    alpha="1"
+	    onclick="hidePres()"
+	/>
+	<hotspot name="Pres4Text"
+		url="textfield.swf"
+		html="President George H.W. Bush visiting Villanova during his first, failed presidential campaign in 1980."
+		css="font-family:Arial; font-size:13px; color:#000000;"
+	    enabled="false"
+	    visible="false"
+	    distorted="false"
+		zorder="90"
+	    ath="105.000" atv="-4.5" 
+	    width="500"
+	    height="50"
+		rz="0"
+		ry="0"
+		rx="0"
+	    edge="center"
+		alpha=".7"
+		background ="true"
+	/>
+
 <action name="showPres2">
 		set(hotspot[Pres2Image].alpha, 0);
     	
@@ -887,8 +923,23 @@
 
 		delayedcall(.5, set(hotspot[Pres2Image].visible, false))
 	</action>
+	
+	<action name="showPres4">
+		set(hotspot[Pres4Image].alpha, 0);
+    	
+    	set(hotspot[Pres4Image].height, 0.1);
+    	set(hotspot[Pres4Image].visible, true);
+    	tween(hotspot[Pres4Image].alpha, 1,.5,linear);
+    	tween(hotspot[Pres4Image].height, 370, .5, linear, wait);
 
-	<action name="hidePres">
+    	set(hotspot[PresTextBack].visible, true);
+		set(hotspot[PresTextBack].alpha, 0);
+		tween(hotspot[PresTextBack].alpha, 1,.5,linear, wait);
+
+		set(hotspot[Pres4Image].enabled, true);
+		set(hotspot[foyer].enabled, false);
+		set(hotspot[Pres4Text].visible,true);
+		
 		tween(hotspot[PresTextBack].alpha, 0, .5, linear);
 		tween(hotspot[Pres3Image].alpha, 0, .5, linear);
 		tween(hotspot[Pres3Image].height, 1, .5, linear, wait);
@@ -902,6 +953,22 @@
 		set(hotspot[Pres3Text].visible,false);
 
 		delayedcall(.5, set(hotspot[Pres3Image].visible, false))
+	</action>
+
+	<action name="hidePres">
+		tween(hotspot[PresTextBack].alpha, 0, .5, linear);
+		tween(hotspot[Pres4Image].alpha, 0, .5, linear);
+		tween(hotspot[Pres4Image].height, 1, .5, linear, wait);
+		
+		set(hotspot[Pres4Image].enabled, false);
+		set(hotspot[Pres4Image].visible, false);
+		set(hotspot[Pres4Image].alpha, 1);
+		set(hotspot[INFOPres].visible, true);
+		set(hotspot[INFOPres].enabled, true);
+		set(hotspot[foyer].enabled, true);
+		set(hotspot[Pres4Text].visible,false);
+
+		delayedcall(.5, set(hotspot[Pres4Image].visible, false))
 	</action>
 
 	
@@ -1381,7 +1448,7 @@
 	/>
 	<hotspot name="KennedyText"
 		url="textfield.swf"
-		html="Kennedy hall was built in 1969, and was named for US President John F. Kennedy in 1969. JFK received an honorary diploma from Villanova in 1957. Today it houses the university bookstore, a mailroom, and offices."
+		html="Kennedy hall was built in 1969, and was named for US President John F. Kennedy, and his brother, Robert 'Bobby' F Kennedy, in 1969. JFK received an honorary diploma from Villanova in 1957. Today it houses the university bookstore, a mailroom, and offices."
 		css="font-family:Arial; font-size:11px; color:#000000;"
 	    enabled="false"
 	    visible="false"
@@ -1465,28 +1532,12 @@
 	    onclick="showChurch()"
 	    keep="false"
 	/>
-		<hotspot name="ChurchImage"
-	    url="churchold.jpg"
-	    enabled="false"
-	    visible="false"
-	    distorted="false"
-	    crop=""
-	    zorder="20"
-	  ath="71" atv="-13"
-	    width="800"
-	    height="300"
-		rz="0"
-		ry="0"
-		rx="0"
-	    edge="bottom"
-	    alpha="1"
-	    onclick="hideChurch()"
-	/>
+
 	<hotspot name="ChurchText"
 		url="textfield.swf"
 		html="The St. Thomas of Villanova Church, constructed in the Gothic Revival style, has long been the centerpiece of campus since its completion in 1887, with the building's architecture becoming symbolic of the University. The Church underwent major renovations in 1943 and 1992."
 		css="font-family:Arial; font-size:11px; color:#000000;"
-	    enabled="false"
+	    enabled="true"
 	    visible="false"
 	    distorted="true"
 		zorder="90"
@@ -1499,6 +1550,7 @@
 	    edge="center"
 		alpha=".7"
 		background ="true"
+		onclick="hideChurch()"
 	/>
 	<action name="showChurch">
     	set(hotspot[INFOChurch].visible, false);
@@ -1521,18 +1573,12 @@
 
 	<action name="hideChurch">
 		tween(hotspot[ChurchTextBack].alpha, 0, .5, linear);
-		tween(hotspot[ChurchImage].alpha, 0, .5, linear);
-		tween(hotspot[ChurchImage].height, 1, .5, linear, wait);
-		
-		set(hotspot[ChurchImage].enabled, false);
-		set(hotspot[ChurchImage].visible, false);
-		set(hotspot[ChurchImage].alpha, 1);
 		set(hotspot[INFOChurch].visible, true);
 		set(hotspot[INFOChurch].enabled, true);
 		set(hotspot[foyer].enabled, true);
 		set(hotspot[ChurchText].visible,false);
 
-		delayedcall(.5, set(hotspot[ChurchImage].visible, false))
+		delayedcall(.5, set(hotspot[ChurchText].visible, false))
 	</action>
 		<!-- army image -->
 	<hotspot name="INFOarmy"
