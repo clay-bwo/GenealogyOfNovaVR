@@ -435,10 +435,10 @@
 	    distorted="true"
 	    crop="0|0|100|100"
 	    zorder="20"
-	  ath="70" atv="-3" 
+	    ath="-15.000" atv="-3.000" 
 	    width="60"
 	    height="140"
-		rz="180"
+		rz="1"
 		ry="180"
 		rx="-75"
 	    edge="center"
@@ -446,13 +446,13 @@
 	    keep="false"
 	/>
 		<hotspot name="VillanImage"
-	    url="countvillanportrait.jpg"
+	    url="Villanold.jpg"
 	    enabled="false"
 	    visible="false"
 	    distorted="false"
 	    crop=""
 	    zorder="20"
-	    ath="70" atv="-3" 
+	    ath="-8.000" atv="10.000" 
 	    width="500"
 	    height="370"
 		rz="0"
@@ -470,7 +470,7 @@
 	    visible="false"
 	    distorted="false"
 		zorder="90"
-	    ath="70" atv="-3" 
+	    ath="-8.2500" atv="11.500" 
 	    width="500"
 	    height="50"
 		rz="0"
@@ -557,7 +557,7 @@
 	    visible="false"
 	    distorted="false"
 		zorder="90"
-	    ath="-8.250" atv="11.500" 
+	    ath="-8.2500" atv="11.500" 
 	    width="500"
 	    height="50"
 		rz="0"
@@ -644,7 +644,7 @@
 	    visible="false"
 	    distorted="false"
 		zorder="90"
-	    ath="-128.000" atv="2.000" 
+	    ath="-128.000" atv="2.00" 
 	    width="500"
 	    height="53"
 		rz="0"
@@ -690,6 +690,7 @@
 	</action>
 		<hotspot name="spot2" style="skin_hotspotstyle" ath="131.168" atv="-4.392" linkedscene="scene_grotto" />
 		<hotspot name="spot1" style="skin_hotspotstyle" ath="-167.152" atv="-6.785" linkedscene="scene_img_1971_panorama" />
+
 
 	</scene>
 
