@@ -938,7 +938,7 @@
 		
 		<control bouncinglimits="false" />
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="87.205128" maxpixelzoom="2.0" fovmin="33.244843" fovmax="87.205128" limitview="range" hlookatmin="-180.0" hlookatmax="180.0" vlookatmin="-55.665" vlookatmax="31.783158"/>
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="68.846154" maxpixelzoom="2.0" fovmin="20.840214" fovmax="68.846154" limitview="range" hlookatmin="-180.0" hlookatmax="180.0" vlookatmin="-55.665" vlookatmax="31.783158"/>
 
 		<preview url="panos/IMG_1971_Panorama.tiles/preview.jpg" />
 
@@ -1054,17 +1054,17 @@
 	    url="armyold.jpg"
 	    enabled="false"
 	    visible="false"
-	    distorted="true"
+	    distorted="false"
 	    crop=""
 	    zorder="20"
 	   ath="20.000" atv="10.000" 
-	    width="1500"
-	    height="700"
+	    width="800"
+	    height="300"
 		rz="0"
 		ry="0"
-		rx="10"
+		rx="0"
 	    edge="bottom"
-	    alpha="0.85"
+	    alpha="1"
 	    onclick="hidearmy()"
 	/>
 	<hotspot name="armyText"
@@ -1078,11 +1078,11 @@
 	    ath="20.000" atv="12.000" 
 	    width="296"
 	    height="65"
-		rz="1"
+		rz="0"
 		ry="0"
-		rx="5"
+		rx="0"
 	    edge="center"
-		alpha=".8"
+		alpha=".7"
 		background ="true"
 	/>
 	<action name="showarmy">
@@ -1092,7 +1092,7 @@
     	
     	set(hotspot[armyImage].height, 0.1);
     	set(hotspot[armyImage].visible, true);
-    	tween(hotspot[armyImage].alpha, 0.85,.5,linear);
+    	tween(hotspot[armyImage].alpha, 1,.5,linear);
     	tween(hotspot[armyImage].height, 300, .5, linear, wait);
 
     	set(hotspot[armyTextBack].visible, true);
